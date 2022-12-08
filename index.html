@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <title>Frontend Mentor | Multi-step form</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="stylesheet" href="./css/main.css">
+</head>
+<body>
+  <div class="container">
+    <div class="main-content">
+      <div class="side-bar">
+        <div class="steps">
+          <div id="step-1" class="step">
+            <div class="step-number">1</div>
+            <div class="step-info">
+              <div class="step-title">Step 1</div>
+              <div class="step-name">Your info</div>
+            </div>
+          </div>
+          <div id="step-2" class="step">
+            <div class="step-number">2</div>
+            <div class="step-info">
+              <div class="step-title">Step 2</div>
+              <div class="step-name">Select plan</div>
+            </div>
+          </div>
+          <div id="step-3" class="step">
+            <div class="step-number">3</div>
+            <div class="step-info">
+              <div class="step-title">Step 3</div>
+              <div class="step-name">Add-ons</div>
+            </div>
+          </div>
+          <div id="step-4" class="step">
+            <div class="step-number">4</div>
+            <div class="step-info">
+              <div class="step-title">Step 4</div>
+              <div class="step-name">Summary</div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="main-sec">
+        <div class="steps-content">
+          <div data-id="step-1" class="step-content step-content-1">
+            <h2>Personal info</h2>
+            <p>Please provide your name, email address, and phone number.</p>
+            <form action="">
+              <div class="form-control">
+                <label for="name">Name</label>
+                <input class="field" type="text" name="name" id="name" placeholder="e..g. Stephen King">
+              </div>
+              <div class="form-control">
+                <label for="email">Email Address</label>
+                <input class="field" type="email" name="email" id="email" placeholder="e.g. stephenking@lorem.com">
+              </div>
+              <div class="form-control">
+                <label for="phone">Phone Number</label>
+                <input class="field" type="phone" name="phone" id="phone" placeholder="e.g. +1 234 567 890">
+              </div>
+              <div class="form-control">
+                <input type="submit" value="Next Step" class="next submit">
+              </div>
+            </form>
+          </div>
+          <div data-id="step-2" class="step-content step-content-2 hide">
+            <h2>Select your plan</h2>
+            <p>You have the option of monthly or yearly billing.</p>
+            <div class="boxes">
+              <div class="box">
+                <div class="icon"><img src="./assets/images/icon-arcade.svg" alt=""></div>
+                <div>
+                  <h3>Arcade</h3>
+                  <p>$<span class="figure">9</span>
+                    <span class="period">/mo</span>
+                  </p>
+                </div>
+              </div>
+              <div class="box">
+                <div class="icon"><img src="./assets/images/icon-advanced.svg" alt=""></div>
+                <div>
+                  <h3>Advanced</h3>
+                  <p>$<span class="figure">12</span>
+                    <span class="period">/mo</span>
+                  </p>
+                </div>
+              </div>
+              <div class="box">
+                <div class="icon"><img src="./assets/images/icon-pro.svg" alt=""></div>
+                <div>
+                  <h3>Pro</h3>
+                  <p>$<span class="figure">15</span>
+                    <span class="period">/mo</span>
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div class="switcher">
+              <div><p>Monthly</p></div>
+              <div class="bulls">
+                <span class="bull monthly clicked"></span>
+                <span class="bull yearly"></span>
+              </div>
+              <div><p>Yearly</p></div>
+            </div>
+            <div>
+              <div class="back-forward">
+                <button class="back">Go Back</button>
+                <button class="next">Next Step</button>
+              </div>
+            </div>
+          </div>
+          <div data-id="step-3" class="step-content step-content-3 hide">
+            <h2>Pick add-ons</h2>
+            <p>Add-ons help enhance your gaming experience.</p>
+            <div class="check-boxes">
+              <form action="">
+                <div class="choices">
+                  <div class="choice">
+                    <input type="checkbox" name="online" id="online">
+                    <label for="online">
+                      <div class="info">
+                        <h3>Online service</h3>
+                        <p>Access to multiplayer games</p>
+                      </div>
+                      <div class="price">
+                        <p>+$1/mo</p>
+                      </div>
+                    </label>
+                  </div>
+                  <div class="choice">
+                    <input type="checkbox" name="storage" id="storage">
+                    <label for="storage">
+                      <div class="info">
+                        <h3>Larger storage</h3>
+                        <p>Extra 1TB of cloud save</p>
+                      </div>
+                      <div class="price">
+                        <p>+$2/mo</p>
+                      </div>
+                    </label>
+                  </div>
+                  <div class="choice">
+                    <input class="check-box" type="checkbox" name="profile" id="profile">
+                    <label for="profile">
+                      <div class="info">
+                        <h3>Customizable Profile</h3>
+                        <p>Custom theme on your profile</p>
+                      </div>
+                      <div class="price">
+                        <p>+$2/mo</p>
+                      </div>
+                    </label>
+                  </div>
+                </div>
+                <!-- <div class="back-forward">
+                  <button class="back">Go Back</button>
+                  <button class="next">Next Step</button>
+                </div> -->
+              </form>
+              <div class="back-forward">
+                <button class="back">Go Back</button>
+                <button class="next">Next Step</button>
+              </div>
+            </div>
+          </div>
+          <div data-id="step-4" class="step-content step-content-4 hide">
+            <h2>Finishing up</h2>
+            <p>Double-check everything looks OK before confirming.</p>
+            <div class="picked-items">
+              <div class="picked-item">
+                <div class="info">
+                  <h3>arcade (monthly)</h3>
+                  <a href="">change</a>
+                </div>
+                <div class="price">
+                  <p>$9/mo</p>
+                </div>
+              </div>
+              <div class="picked-item">
+                <div class="info">
+                  <h3>our services</h3>
+                  <a href="">change</a>
+                </div>
+                <div class="price">
+                  <p>$1/mo</p>
+                </div>
+              </div>
+              <div class="picked-item">
+                <div class="info">
+                  <h3>larger storage</h3>
+                  <a href="">change</a>
+                </div>
+                <div class="price">
+                  <p>$2/mo</p>
+                </div>
+              </div>
+            </div>
+            <div class="total-amout">
+              <div class="per-m-y">
+                <p>Total per month</p>
+              </div>
+              <div class="total-number">
+                <p>$0</p>
+              </div>
+            </div>
+            <div>
+              <div class="back-confirm">
+                <button class="back">Go Back</button>
+                <button class="confirm">Confirm</button>
+              </div>
+            </div>
+          </div>
+          <div class="thank-you-page hide">
+            <div class="content">
+              <div class="icon"><img src="./assets/images/icon-thank-you.svg" alt=""></div>
+              <h3>Thank you!</h3>
+              <p>
+                Thanks for confirming your subscription! We hope you have fun using our platform. If you ever need support, please feel free to email us at support@loremgaming.com.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <footer class="attribution">
+    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
+    Coded by <a href="https://github.com/elasri21" target="_blank">elasri21</a>.
+  </footer>
+  <script src="main.js"></script>
+</body>
+</html>

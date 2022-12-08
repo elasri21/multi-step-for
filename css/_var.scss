@@ -1,0 +1,28 @@
+// font 
+$font-family: 'Ubuntu', sans-serif;
+// body copy
+$text-size: 16px;
+
+// primary color
+$marine-blue: hsl(213, 96%, 18%);
+$btn-bg: $marine-blue;
+$purplish-blue: hsl(243, 100%, 62%);
+$bg-blue: $purplish-blue;
+$pastel-blue: hsl(228, 100%, 84%);
+$main-bg: $pastel-blue;
+$light-blue: hsl(206, 94%, 87%);
+$active-box-bg: $light-blue;
+$strawberry-red: hsl(354, 84%, 57%);
+$error-color:  $strawberry-red;
+
+// neutral color
+$cool-gray: hsl(231, 11%, 63%);
+$text-color: $cool-gray;
+$light-gray: hsl(229, 24%, 87%);
+$border-color: $light-gray;
+$magnolia: hsl(217, 100%, 97%);
+$alabaster: hsl(231, 100%, 99%);
+$white: hsl(0, 0%, 100%);
+
+// transition
+$trans: .3s;
