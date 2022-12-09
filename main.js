@@ -8,6 +8,30 @@ forms.forEach(form => form.addEventListener("submit", function(e) {
     e.preventDefault();
 }));
 
+// Validate fields
+let fields = Array.from(document.querySelectorAll(".field"));
+fields.forEach(field => {
+    field.addEventListener("blur", function(){
+        if(field.value == "") {
+            field.style.borderColor = "hsl(354, 84%, 57%)";
+            field.previousElementSibling.style.opacity = "1";
+        } else {
+            field.style.borderColor = "hsl(229, 24%, 87%)";
+            field.previousElementSibling.style.opacity = "0";
+        }
+    });
+});
+
+// chosen plan
+let boxes = Array.from(document.querySelectorAll(".box"));
+boxes.forEach(box => {
+    box.addEventListener("click", function(e) {
+        for(let i = 0;i < boxes.length; i++) {
+            boxes[i].classList.remove("chosen");
+        }
+        this.classList.add("chosen");
+    });
+});
 // complet a specific step
 steps.forEach(step => {
     step.addEventListener("click", function(e) {
@@ -81,9 +105,12 @@ const confirmBtn = document.querySelector(".confirm");
 confirmBtn.addEventListener("click", function() {
     document.querySelector(".thank-you-page").classList.remove("hide");
     this.parentElement.parentElement.parentElement.classList.add("hide");
+    setTimeout(function() {
+        window.location.reload();
+    }, 1000)
 });
 
-// Reload
-document.querySelector(".thank-you-page").addEventListener("click", function() {
-    window.location.reload();
-});
+// // Reload
+// document.querySelector(".thank-you-page").addEventListener("click", function() {
+//     window.location.reload();
+// });

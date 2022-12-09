@@ -11,7 +11,7 @@ This is a solution to the [Multi-step form challenge on Frontend Mentor](https:/
 
 ### Links
 
-- Solution URL: [solution URL](https://github.com/elasri21/multi-step-for)
+- Solution URL: [solution URLlear](https://github.com/elasri21/multi-step-for)
 - Live Site URL: [live site](https://elasri21.github.io/multi-step-for/)
 
 ## My process

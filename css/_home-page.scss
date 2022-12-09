@@ -112,6 +112,7 @@
                 .step-content-1 {
                     form {
                         .form-control {
+                            position: relative;
                             margin-bottom: 20px;
                             label {
                                 font-size: .9em;
@@ -119,6 +120,17 @@
                                 font-weight: 400;
                                 color: $btn-bg;
                                 margin-bottom: 7px;
+                            }
+                            .error {
+                                font-size: 15px;
+                                text-transform: capitalize;
+                                color: $error-color;
+                                position: absolute;
+                                font-weight: 600;
+                                right: 0;
+                                top: -7px;
+                                transition: $trans;
+                                opacity: 0;
                             }
                             input {
                                 font-size: 1em;
@@ -426,6 +438,10 @@
 }
 .active {
     border-color: $main-bg;
+}
+.chosen {
+    border-color: $text-color;
+    background-color: $magnolia;
 }
 /* footer rules*/
 .attribution { 
