@@ -54,6 +54,10 @@
                         transition: $trans;
                         font-size: 1.2em;
                         font-weight: 600;
+                        &.parent-clicked {
+                            background-color: $main-bg;
+                            color: $btn-bg;
+                        }
                     }
                     &:hover {
                         border-color: $main-bg;

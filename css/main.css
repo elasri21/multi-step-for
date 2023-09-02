@@ -122,6 +122,10 @@ button.next:hover, button.confirm:hover {
   font-size: 1.2em;
   font-weight: 600;
 }
+.container .main-content .side-bar .steps .step .step-number.parent-clicked {
+  background-color: #adbeff;
+  color: #02295a;
+}
 .container .main-content .side-bar .steps .step:hover {
   border-color: #adbeff;
 }
