@@ -2,6 +2,8 @@
 // check for empty field
 const fields = document.querySelectorAll(".field");
 const next1 = document.querySelector(".step-content-1 .submit");
+let validEmail = /\w+@\w+.\w+/ig;
+let validPhone = /\+\d+/g;
 next1.addEventListener("click", function (e) {
   let test = false;
   fields.forEach((field) => {
@@ -23,11 +25,10 @@ next1.addEventListener("click", function (e) {
   if (test) {
     getInfo();
     this.parentElement.parentElement.parentElement.classList.add("hide");
-    this.parentElement.parentElement.parentElement.nextElementSibling.classList.remove(
-      "hide"
-    );
+    this.parentElement.parentElement.parentElement.nextElementSibling.classList.remove("hide");
   }
 });
+
 // prevent forms from being validated
 const allForms = document.querySelectorAll("form");
 allForms.forEach((form) => {
@@ -45,6 +46,22 @@ function getInfo() {
   info.email = email.value;
   info.phone = phone.value;
 }
+// validate field values
+const email = document.querySelector("input[type=email]");
+const phone = document.querySelector("input[type=phone]");
+function isValid(f, r) {
+  if (!r.test(f.value)) {
+    alert("Please Enter a valid value");
+    return false;
+  }
+  return true;
+}
+email.addEventListener("blur", function(){
+  isValid(email, validEmail);
+});
+phone.addEventListener("blur", function(){
+  isValid(phone,validPhone)
+});
 
 
 /* Step two */
@@ -127,10 +144,16 @@ checkBoxes.forEach((cb) => {
 const next3 = document.querySelector(".step-content-3 .next");
 next3.addEventListener("click", function () {
   addPick = 0;
-  if (picked.length == 0) {
+  if (picked.length == 0 || price == 0) {
     alert("Please chose an add-pick");
     return;
   }
+  fields.forEach(field => {
+    if (field.value == "") {
+      alert("All field must be filled");
+      return;
+    }
+  });
   picked.forEach((a) => (addPick += a));
   this.parentElement.parentElement.parentElement.classList.add("hide");
   this.parentElement.parentElement.parentElement.nextElementSibling.classList.remove("hide");
